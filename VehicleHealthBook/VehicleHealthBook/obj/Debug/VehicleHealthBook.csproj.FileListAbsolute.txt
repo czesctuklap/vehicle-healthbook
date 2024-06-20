@@ -14,7 +14,6 @@ D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\Ve
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.exe
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.pdb
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.csproj.AssemblyReference.cache
-D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Form1.resources
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Properties.Resources.resources
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form2.resources
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form3.resources
@@ -23,3 +22,15 @@ D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\Ve
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.exe
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.pdb
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Model.Form1.resources
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.csproj.AssemblyReference.cache
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Properties.Resources.resources
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form2.resources
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form3.resources
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.csproj.GenerateResource.cache
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.csproj.CoreCompileInputs.cache
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.exe.config
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.exe
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.pdb
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form1.resources
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.exe
+D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.pdb

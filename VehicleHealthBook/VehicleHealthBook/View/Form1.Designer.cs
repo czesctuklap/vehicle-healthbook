@@ -1,4 +1,4 @@
-﻿namespace VehicleHealthBook.Model
+﻿namespace VehicleHealthBook.View
 {
     partial class Form1
     {
@@ -30,18 +30,26 @@
         {
             this.listView1 = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.chProducer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chYearProduced = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chProducer,
+            this.chModel,
+            this.chYearProduced});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(159, 56);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(572, 377);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // button1
             // 
@@ -51,15 +59,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "dodaj";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(535, 461);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "usuń";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.goToAddVehicle);
             // 
             // label1
             // 
@@ -69,6 +69,31 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "pojazdy";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(535, 461);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "usuń";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.deleteVehicle);
+            // 
+            // chProducer
+            // 
+            this.chProducer.Text = "Producer";
+            this.chProducer.Width = 100;
+            // 
+            // chModel
+            // 
+            this.chModel.Text = "Model";
+            this.chModel.Width = 100;
+            // 
+            // chYearProduced
+            // 
+            this.chYearProduced.Text = "Production Year";
+            this.chYearProduced.Width = 100;
             // 
             // Form1
             // 
@@ -88,10 +113,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ColumnHeader chProducer;
+        private System.Windows.Forms.ColumnHeader chModel;
+        private System.Windows.Forms.ColumnHeader chYearProduced;
     }
 }
 

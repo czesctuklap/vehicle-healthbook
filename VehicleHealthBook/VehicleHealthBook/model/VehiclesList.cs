@@ -69,5 +69,9 @@ namespace VehicleHealthBook.Model
             // Inicjalizacja listy wydarzeń, jeśli to konieczne
         }
 
+        public void AddVehicle(Vehicle veh)
+        {
+            MessageBox.Show("added to database");
+        }
     }
 }
