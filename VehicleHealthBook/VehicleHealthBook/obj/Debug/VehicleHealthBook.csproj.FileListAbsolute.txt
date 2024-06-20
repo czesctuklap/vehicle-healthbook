@@ -22,3 +22,4 @@ D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\Ve
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.csproj.CoreCompileInputs.cache
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.exe
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.pdb
+D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Model.Form1.resources
