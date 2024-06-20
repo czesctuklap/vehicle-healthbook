@@ -1,4 +1,4 @@
-﻿namespace VehicleHealthBook.Model
+﻿namespace VehicleHealthBook.View
 {
     partial class Form1
     {

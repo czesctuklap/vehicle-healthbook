@@ -1,4 +1,4 @@
-﻿using VehicleHealthBook.Model;
+﻿/*using VehicleHealthBook.Model;
 using VehicleHealthBook.View;
 using System;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ namespace VehicleHealthBook.Presenter
             }
             else
             {
-                Vehicle veh = new Vehicle(_view.getProducer(), _view.getModel(), _view.getYear_produced(), _view.getLicense_plate_number(), _view.getMilage(), _view.getInsurace_date, _view.getMOT_date, _view.);
+                Vehicle veh = new Vehicle(_view.getProducer(), _view.getModel(), _view.getYear_produced(), _view.getLicense_plate_number(), _view.getMilage(), _view.getInsurace_date(), _view.getMOT_date(), _view.getType());
                 _view.vehicleslist.list.Add(veh);
                 _view.addToListView();
             }
@@ -86,4 +86,4 @@ namespace VehicleHealthBook.Presenter
             _view.SortItems(e.Column, _sortOrder);
         }
     }
-}
+}*/
