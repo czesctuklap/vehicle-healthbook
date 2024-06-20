@@ -45,8 +45,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.returnButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -202,31 +202,33 @@
             this.button1.Text = "edytuj";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // returnButton
             // 
-            this.button2.Location = new System.Drawing.Point(544, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 99);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "powrót do spisu pojazdów";
-            this.button2.UseVisualStyleBackColor = true;
+            this.returnButton.Location = new System.Drawing.Point(545, 217);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(161, 99);
+            this.returnButton.TabIndex = 17;
+            this.returnButton.Text = "powrót do spisu pojazdów";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.goToVehicleList);
             // 
-            // button3
+            // deleteButton
             // 
-            this.button3.Location = new System.Drawing.Point(556, 347);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 100);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "usuń";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deleteButton.Location = new System.Drawing.Point(556, 347);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(188, 100);
+            this.deleteButton.TabIndex = 18;
+            this.deleteButton.Text = "usuń";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteVehicle);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -270,7 +272,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.Button deleteButton;
     }
 }
