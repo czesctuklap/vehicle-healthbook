@@ -14,7 +14,6 @@ D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\Ve
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.exe
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\VehicleHealthBook.pdb
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.csproj.AssemblyReference.cache
-D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Form1.resources
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.Properties.Resources.resources
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form2.resources
 D:\studia\semestr_IV\programowanie_obiektowe\files\projekt\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form3.resources

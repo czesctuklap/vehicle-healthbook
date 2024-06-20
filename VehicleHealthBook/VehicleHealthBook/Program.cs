@@ -4,6 +4,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleHealthBook.Model;
+using VehicleHealthBook.Presenter;
 using VehicleHealthBook.View;
 
 namespace VehicleHealthBook.View
@@ -20,9 +22,13 @@ namespace VehicleHealthBook.View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.Form1());
 
+            string connectionString = "Server=localhost;Database=vehivle_healthbook;User Id=root;Password=1234;";
+            VehicleRepository repository = new VehicleRepository(connectionString);
+            Form2 view = new Form2();
+            Form2Presenter presenter = new Form2Presenter(view, repository);
 
+            Application.Run(new View.Form2());
         }
     }
 }

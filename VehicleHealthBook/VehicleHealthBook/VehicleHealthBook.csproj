@@ -103,6 +103,11 @@
     <Compile Include="Model\VehiclesList.cs" />
     <Compile Include="Presenter\Form1Presenter.cs" />
     <Compile Include="Presenter\Form3Presenter.cs" />
+    <Compile Include="Model\AddVehicle.cs" />
+    <Compile Include="Model\Repository.cs" />
+    <Compile Include="Model\Vehicle.cs" />
+    <Compile Include="Model\VehiclesList.cs" />
+    <Compile Include="Presenter\Form2Presenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
@@ -156,6 +161,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

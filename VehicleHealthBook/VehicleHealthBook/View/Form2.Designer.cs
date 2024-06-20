@@ -37,20 +37,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.licenseNumberBox = new System.Windows.Forms.TextBox();
+            this.mileageBox = new System.Windows.Forms.TextBox();
+            this.yearProducedBox = new System.Windows.Forms.TextBox();
+            this.modelBox = new System.Windows.Forms.TextBox();
+            this.producerBox = new System.Windows.Forms.TextBox();
+            this.motDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.insuranceDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.typeBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.surnameBox = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.addVehicleButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,7 +100,6 @@
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "przebieg (w km)";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -131,14 +130,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.licenseNumberBox);
+            this.groupBox1.Controls.Add(this.mileageBox);
+            this.groupBox1.Controls.Add(this.yearProducedBox);
+            this.groupBox1.Controls.Add(this.modelBox);
+            this.groupBox1.Controls.Add(this.producerBox);
+            this.groupBox1.Controls.Add(this.motDatePicker);
+            this.groupBox1.Controls.Add(this.insuranceDatePicker);
+            this.groupBox1.Controls.Add(this.typeBox);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -154,10 +153,74 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "dane pojazdu";
             // 
+            // licenseNumberBox
+            // 
+            this.licenseNumberBox.Location = new System.Drawing.Point(171, 364);
+            this.licenseNumberBox.Name = "licenseNumberBox";
+            this.licenseNumberBox.Size = new System.Drawing.Size(162, 20);
+            this.licenseNumberBox.TabIndex = 15;
+            // 
+            // mileageBox
+            // 
+            this.mileageBox.Location = new System.Drawing.Point(118, 206);
+            this.mileageBox.Name = "mileageBox";
+            this.mileageBox.Size = new System.Drawing.Size(215, 20);
+            this.mileageBox.TabIndex = 14;
+            // 
+            // yearProducedBox
+            // 
+            this.yearProducedBox.Location = new System.Drawing.Point(118, 158);
+            this.yearProducedBox.Name = "yearProducedBox";
+            this.yearProducedBox.Size = new System.Drawing.Size(213, 20);
+            this.yearProducedBox.TabIndex = 13;
+            // 
+            // modelBox
+            // 
+            this.modelBox.Location = new System.Drawing.Point(117, 116);
+            this.modelBox.Name = "modelBox";
+            this.modelBox.Size = new System.Drawing.Size(214, 20);
+            this.modelBox.TabIndex = 12;
+            // 
+            // producerBox
+            // 
+            this.producerBox.Location = new System.Drawing.Point(118, 73);
+            this.producerBox.Name = "producerBox";
+            this.producerBox.Size = new System.Drawing.Size(215, 20);
+            this.producerBox.TabIndex = 11;
+            // 
+            // motDatePicker
+            // 
+            this.motDatePicker.Location = new System.Drawing.Point(171, 307);
+            this.motDatePicker.Name = "motDatePicker";
+            this.motDatePicker.Size = new System.Drawing.Size(163, 20);
+            this.motDatePicker.TabIndex = 10;
+            // 
+            // insuranceDatePicker
+            // 
+            this.insuranceDatePicker.Location = new System.Drawing.Point(171, 252);
+            this.insuranceDatePicker.Name = "insuranceDatePicker";
+            this.insuranceDatePicker.Size = new System.Drawing.Size(163, 20);
+            this.insuranceDatePicker.TabIndex = 9;
+            // 
+            // typeBox
+            // 
+            this.typeBox.FormattingEnabled = true;
+            this.typeBox.Items.AddRange(new object[] {
+            "Car",
+            "Truck",
+            "Motorcycle",
+            "Bus",
+            "Van",
+            "SUV"});
+            this.typeBox.Location = new System.Drawing.Point(76, 32);
+            this.typeBox.Name = "typeBox";
+            this.typeBox.Size = new System.Drawing.Size(258, 21);
+            this.typeBox.TabIndex = 8;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.surnameBox);
+            this.groupBox2.Controls.Add(this.nameBox);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(5, 437);
@@ -167,14 +230,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "dane właściciela";
             // 
-            // label9
+            // surnameBox
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "imię";
+            this.surnameBox.Location = new System.Drawing.Point(118, 78);
+            this.surnameBox.Name = "surnameBox";
+            this.surnameBox.Size = new System.Drawing.Size(212, 20);
+            this.surnameBox.TabIndex = 3;
+            // 
+            // nameBox
+            // 
+            this.nameBox.Location = new System.Drawing.Point(118, 31);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(215, 20);
+            this.nameBox.TabIndex = 2;
             // 
             // label10
             // 
@@ -185,85 +253,24 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "nazwisko";
             // 
-            // comboBox1
+            // label9
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(258, 21);
-            this.comboBox1.TabIndex = 8;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(28, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "imię";
             // 
-            // dateTimePicker1
+            // addVehicleButton
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(171, 252);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(163, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(171, 307);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(163, 20);
-            this.dateTimePicker2.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(118, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 20);
-            this.textBox1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(117, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(118, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(118, 206);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 20);
-            this.textBox4.TabIndex = 14;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(171, 364);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 20);
-            this.textBox5.TabIndex = 15;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(118, 31);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(215, 20);
-            this.textBox6.TabIndex = 2;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(118, 78);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(212, 20);
-            this.textBox7.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(428, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 70);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "zapisz";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addVehicleButton.Location = new System.Drawing.Point(428, 270);
+            this.addVehicleButton.Name = "addVehicleButton";
+            this.addVehicleButton.Size = new System.Drawing.Size(180, 70);
+            this.addVehicleButton.TabIndex = 10;
+            this.addVehicleButton.Text = "zapisz";
+            this.addVehicleButton.UseVisualStyleBackColor = true;
+            this.addVehicleButton.Click += new System.EventHandler(this.addVehicleButton_Click);
             // 
             // button2
             // 
@@ -280,7 +287,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addVehicleButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
@@ -307,17 +314,17 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox mileageBox;
+        private System.Windows.Forms.TextBox yearProducedBox;
+        private System.Windows.Forms.TextBox modelBox;
+        private System.Windows.Forms.TextBox producerBox;
+        private System.Windows.Forms.DateTimePicker motDatePicker;
+        private System.Windows.Forms.DateTimePicker insuranceDatePicker;
+        private System.Windows.Forms.ComboBox typeBox;
+        private System.Windows.Forms.TextBox licenseNumberBox;
+        private System.Windows.Forms.TextBox surnameBox;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Button addVehicleButton;
         private System.Windows.Forms.Button button2;
     }
 }

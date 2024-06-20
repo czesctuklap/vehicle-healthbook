@@ -13,7 +13,6 @@ using VehicleHealthBook.Presenter;
 using System.Reflection;
 using System.Runtime.Remoting.Lifetime;
 
-
 namespace VehicleHealthBook.View
 {
     public partial class Form1 : Form
