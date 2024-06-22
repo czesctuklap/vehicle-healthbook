@@ -108,7 +108,6 @@
     <Compile Include="Model\Vehicle.cs" />
     <Compile Include="Model\VehiclesList.cs" />
     <Compile Include="Presenter\Form2Presenter.cs" />
-    <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

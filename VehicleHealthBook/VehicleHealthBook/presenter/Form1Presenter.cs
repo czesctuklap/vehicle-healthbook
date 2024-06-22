@@ -30,7 +30,7 @@ namespace VehicleHealthBook.Presenter
 
         private void _view_GoToAddVehicle(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(_model, _view);
             form2.Show();
             _view.Hide();
         }
@@ -74,7 +74,7 @@ namespace VehicleHealthBook.Presenter
 
         private Form1 _form;
 
-      
+
         private void _view_SelectVehicle(int index)
         {
             if (index >= 0 && index < _form.listView1.Items.Count)

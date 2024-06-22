@@ -13,13 +13,17 @@ namespace VehicleHealthBook.Presenter
     {
         private Form2 _view;
         private Form2 _form;
+        private VehiclesList _model;
+        private Form1 _form1;
         private readonly VehicleRepository _vehicleRepository;
 
-        public Form2Presenter(Form2 view, VehicleRepository vehicleRepository)
+        public Form2Presenter(Form2 view, VehiclesList model, Form1 form1)
         {
             _view = view;
-            _vehicleRepository = vehicleRepository;
+            _model = model;
+            _form1 = form1;
             _view.AddVehicle += AddVehicle;
+            _view.goToVehicleList += _view_goToVehicleList;
         }
 
         // funkcja posredniczaca w dodawaniu do bazy danych
@@ -50,6 +54,12 @@ namespace VehicleHealthBook.Presenter
                 MessageBox.Show("dziala");
                 _view.ClearForm();
             }
+        }
+
+        private void _view_goToVehicleList(object sender, EventArgs e)
+        {
+            _view.Hide();
+            _form1.Show();
         }
     }
 }
