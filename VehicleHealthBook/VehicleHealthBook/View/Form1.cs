@@ -57,8 +57,8 @@ namespace VehicleHealthBook.View
             if (listView1.SelectedItems.Count > 0)
             {
                 ItemDoubleClick?.Invoke(this, EventArgs.Empty);
-                Form3 form3 = new Form3(this.vehicleList, this);  // Przekazanie referencji do Form1
-                form3.Show();
+                //Form3 form3 = new Form3(this.vehicleList, this);  // Przekazanie referencji do Form1
+                //form3.Show();
                 this.Hide();
             }
         }
@@ -90,6 +90,7 @@ namespace VehicleHealthBook.View
             {
                 int index = listView1.SelectedIndices[0];
                 DeleteVehicle?.Invoke(index);
+                Presenter.DeleteVehicleFromDatabase(index);
             }
         }
 

@@ -80,6 +80,21 @@ namespace VehicleHealthBook.Model
             return vehicles;
         }
 
+        public void DeleteVehicleByLicensePlate(string licensePlateNumber)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "DELETE FROM vehicles WHERE license_plate_num = @licensePlateNumber";
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@licensePlateNumber", licensePlateNumber);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 
 }

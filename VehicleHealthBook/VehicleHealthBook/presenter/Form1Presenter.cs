@@ -65,7 +65,7 @@ namespace VehicleHealthBook.Presenter
                     string type = selectedItem.SubItems[7].Text;
 
                     // Utwórz instancję Form3, przekazując vehicleList i referencję do Form1
-                    Form3 form3 = new Form3(_model, _view);
+                    Form3 form3 = new Form3(_model, _view, producer, model, year_produced, license_plate_number, mileage, insurance_date, mot_date, type);
                     form3.vehicleList = _model;  // Przekazanie listy pojazdów do Form3
                     form3.Show();
                     //_view.Hide();
@@ -78,6 +78,10 @@ namespace VehicleHealthBook.Presenter
         {
             if (index >= 0 && index < _view.listView1.Items.Count)
             {
+                var selectedItem = _view.listView1.Items[index];
+                string licensePlateNumber = selectedItem.SubItems[3].Text;
+
+                _vehicleRepository.DeleteVehicleByLicensePlate(licensePlateNumber);
                 _view.listView1.Items.RemoveAt(index);
             }
         }
@@ -116,6 +120,18 @@ namespace VehicleHealthBook.Presenter
             }
 
             _view.SortItems(e.Column, _sortOrder);
+        }
+
+        public void DeleteVehicleFromDatabase(int index)
+        {
+            if (index >= 0 && index < _view.listView1.Items.Count)
+            {
+                var selectedItem = _view.listView1.Items[index];
+                string licensePlateNumber = selectedItem.SubItems[3].Text;
+
+                _vehicleRepository.DeleteVehicleByLicensePlate(licensePlateNumber);
+                _view.listView1.Items.RemoveAt(index);
+            }
         }
     }
 }
