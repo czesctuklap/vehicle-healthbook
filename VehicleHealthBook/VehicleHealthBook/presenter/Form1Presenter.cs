@@ -10,22 +10,32 @@ using VehicleHealthBook.View;
 
 namespace VehicleHealthBook.Presenter
 {
-    class Form1Presenter
+    public class Form1Presenter
     {
         private Form1 _view;
         private Model.VehiclesList _model;
         private ColumnHeader _lastClickedHeader;
+        private VehicleRepository _vehicleRepository;
         private System.Windows.Forms.SortOrder _sortOrder = System.Windows.Forms.SortOrder.Ascending;
 
         public Form1Presenter(Form1 view, Model.VehiclesList model)
         {
             _view = view;
             _model = model;
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=1234;");
+            LoadVehicles();
+
             _view.GoToAddVehicle += _view_GoToAddVehicle;
             _view.DeleteVehicle += _view_DeleteVehicle;
             _view.ItemDoubleClick += _view_ItemDoubleClick;
             _view.SelectVehicle += _view_SelectVehicle;
             _view.ColumnHeaderClicked += _view_ColumnHeaderClicked;
+        }
+
+        public void LoadVehicles()
+        {
+            var vehicles = _vehicleRepository.GetAllVehicles();
+            _view.DisplayVehicles(vehicles);
         }
 
         private void _view_GoToAddVehicle(object sender, EventArgs e)

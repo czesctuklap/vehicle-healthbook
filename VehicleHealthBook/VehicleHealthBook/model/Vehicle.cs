@@ -9,12 +9,12 @@ namespace VehicleHealthBook.Model
 {
     public enum VehicleType
     {
-        Car,
-        Truck,
-        Motorcycle,
-        Bus,
-        Van,
-        SUV
+        car,
+        truck,
+        motorcycle,
+        bus,
+        van,
+        suv
     }
 
     public class Vehicle
