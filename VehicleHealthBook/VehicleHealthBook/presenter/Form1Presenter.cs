@@ -10,17 +10,21 @@ using VehicleHealthBook.View;
 
 namespace VehicleHealthBook.Presenter
 {
-    class Form1Presenter
+    public class Form1Presenter
     {
         private Form1 _view;
         private Model.VehiclesList _model;
         private ColumnHeader _lastClickedHeader;
+        private VehicleRepository _vehicleRepository;
         private System.Windows.Forms.SortOrder _sortOrder = System.Windows.Forms.SortOrder.Ascending;
 
         public Form1Presenter(Form1 view, Model.VehiclesList model)
         {
             _view = view;
             _model = model;
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=1234;");
+            LoadVehicles();
+
             _view.GoToAddVehicle += _view_GoToAddVehicle;
             _view.DeleteVehicle += _view_DeleteVehicle;
             _view.ItemDoubleClick += _view_ItemDoubleClick;
@@ -28,9 +32,15 @@ namespace VehicleHealthBook.Presenter
             _view.ColumnHeaderClicked += _view_ColumnHeaderClicked;
         }
 
+        public void LoadVehicles()
+        {
+            var vehicles = _vehicleRepository.GetAllVehicles();
+            _view.DisplayVehicles(vehicles);
+        }
+
         private void _view_GoToAddVehicle(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(_model, _view);
             form2.Show();
             _view.Hide();
         }
@@ -55,7 +65,7 @@ namespace VehicleHealthBook.Presenter
                     string type = selectedItem.SubItems[7].Text;
 
                     // Utwórz instancję Form3, przekazując vehicleList i referencję do Form1
-                    Form3 form3 = new Form3(_model, _view);
+                    Form3 form3 = new Form3(_model, _view, producer, model, year_produced, license_plate_number, mileage, insurance_date, mot_date, type);
                     form3.vehicleList = _model;  // Przekazanie listy pojazdów do Form3
                     form3.Show();
                     //_view.Hide();
@@ -68,13 +78,17 @@ namespace VehicleHealthBook.Presenter
         {
             if (index >= 0 && index < _view.listView1.Items.Count)
             {
+                var selectedItem = _view.listView1.Items[index];
+                string licensePlateNumber = selectedItem.SubItems[3].Text;
+
+                _vehicleRepository.DeleteVehicleByLicensePlate(licensePlateNumber);
                 _view.listView1.Items.RemoveAt(index);
             }
         }
 
         private Form1 _form;
 
-      
+
         private void _view_SelectVehicle(int index)
         {
             if (index >= 0 && index < _form.listView1.Items.Count)
@@ -106,6 +120,18 @@ namespace VehicleHealthBook.Presenter
             }
 
             _view.SortItems(e.Column, _sortOrder);
+        }
+
+        public void DeleteVehicleFromDatabase(int index)
+        {
+            if (index >= 0 && index < _view.listView1.Items.Count)
+            {
+                var selectedItem = _view.listView1.Items[index];
+                string licensePlateNumber = selectedItem.SubItems[3].Text;
+
+                _vehicleRepository.DeleteVehicleByLicensePlate(licensePlateNumber);
+                _view.listView1.Items.RemoveAt(index);
+            }
         }
     }
 }

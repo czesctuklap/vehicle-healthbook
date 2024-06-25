@@ -26,7 +26,14 @@ namespace VehicleHealthBook.View
             set => _vehicleList = value;
         }
 
-        public Form3(VehiclesList vList, Form1 form1)
+        public Form3(
+            VehiclesList vList,
+            Form1 form1, string producer,
+            string model, string yearProduced,
+            string licensePlate, string mileage,
+            DateTime insuranceDate,
+            DateTime motDate,
+            string type)
         {
             InitializeComponent();
             _vehicleList = vList;  // Ustawienie istniejącej listy pojazdów
@@ -34,6 +41,14 @@ namespace VehicleHealthBook.View
             _form1 = form1;
 
             // Możesz też dodać event handlers lub inicjalizację UI
+            label9.Text = type;
+            label10.Text = producer;
+            label11.Text = model;
+            label12.Text = yearProduced;
+            label13.Text = mileage;
+            label14.Text = insuranceDate.ToString("dd-MM-yyyy");
+            label15.Text = motDate.ToString("dd-MM-yyyy");
+            label16.Text = licensePlate;
         }
 
 

@@ -20,10 +20,21 @@ namespace VehicleHealthBook.View
         public event Action AddVehicle;
         private Form2Presenter presenter;
         private VehicleRepository repository;
-        public Form2()
+        private VehiclesList _vehicleList;
+        private Form1 _form1;
+        public VehiclesList vehicleList
+        {
+            get => _vehicleList;
+            set => _vehicleList = value;
+        }
+        public Form2(VehiclesList vList, Form1 form1)//()
         {
             InitializeComponent();
-            presenter = new Form2Presenter(this, repository);
+            //presenter = new Form2Presenter(this, repository);
+
+            _vehicleList = vList;  // Ustawienie istniejącej listy pojazdów
+            presenter = new Form2Presenter(this, vList, form1);  // Przekazanie referencji do Form1 do presenter
+            _form1 = form1;
         }
 
         public VehicleType getType()
@@ -101,6 +112,11 @@ namespace VehicleHealthBook.View
             insuranceDatePicker.Value = DateTime.Now;
             motDatePicker.Value = DateTime.Now;
             typeBox.SelectedIndex = -1;
+        }
+        public EventHandler goToVehicleList;
+        private void goToForm1(object sender, EventArgs e)
+        {
+            goToVehicleList?.Invoke(this, EventArgs.Empty);
         }
     }
 }

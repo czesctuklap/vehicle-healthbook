@@ -9,20 +9,23 @@ using VehicleHealthBook.View;
 
 namespace VehicleHealthBook.Presenter
 {
-    class Form2Presenter
+    public class Form2Presenter
     {
         private Form2 _view;
-        private Form2 _form;
-        private readonly VehicleRepository _vehicleRepository;
+        private VehiclesList _model;
+        private Form1 _form1;
+        private VehicleRepository _vehicleRepository;
 
-        public Form2Presenter(Form2 view, VehicleRepository vehicleRepository)
+        public Form2Presenter(Form2 view, VehiclesList model, Form1 form1)
         {
             _view = view;
-            _vehicleRepository = vehicleRepository;
+            _model = model;
+            _form1 = form1;
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=1234;");
             _view.AddVehicle += AddVehicle;
+            _view.goToVehicleList += _view_goToVehicleList;
         }
 
-        // funkcja posredniczaca w dodawaniu do bazy danych
         private void AddVehicle()
         {
             if (String.IsNullOrEmpty(_view.getProducer()) ||
@@ -45,11 +48,20 @@ namespace VehicleHealthBook.Presenter
                     _view.getInsurance_Date,
                     _view.getMot_Date,
                     _view.getType()
-                    );
+                );
                 _vehicleRepository.AddVehicle(veh);
-                MessageBox.Show("dziala");
+                MessageBox.Show("działa");
                 _view.ClearForm();
+                _form1.Presenter.LoadVehicles(); // Load the updated list of vehicles
+                _view_goToVehicleList(this, EventArgs.Empty);
             }
         }
+
+        private void _view_goToVehicleList(object sender, EventArgs e)
+        {
+            _view.Hide();
+            _form1.Show();
+        }
     }
+
 }
