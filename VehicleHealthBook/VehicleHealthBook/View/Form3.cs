@@ -88,5 +88,15 @@ namespace VehicleHealthBook.View
             form4.Show();
             this.Hide();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

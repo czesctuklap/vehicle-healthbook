@@ -23,7 +23,7 @@ namespace VehicleHealthBook.Presenter
             _model = model;
             _form1 = form1;
             _currentVehicle = vehicle;
-            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=kamil;");
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=Zaq12wsx;");
 
             _view.GoToVehicleList += _view_GoToVehicleList;
             _view.UpdateVehicle += UpdateVehicle;
@@ -45,6 +45,18 @@ namespace VehicleHealthBook.Presenter
 
         private void UpdateVehicle(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(_view.GetProducer()) ||
+                String.IsNullOrEmpty(_view.GetModel()) ||
+                String.IsNullOrEmpty(_view.GetYearProduced()) ||
+                String.IsNullOrEmpty(_view.GetLicenseNumber()) ||
+                String.IsNullOrEmpty(_view.GetMileage()) ||
+                _view.GetInsuranceDate() == null ||  // Assuming this returns a DateTime?
+                _view.GetMotDate() == null || _view.GetYearProduced().Length > 4)
+            {
+                MessageBox.Show("You have to fill the empty spaces!");
+                return;  // Exit the method if any required fields are empty
+            }
+
             string oldLicensePlateNumber = _currentVehicle.License_number; // Store the old license plate number
             _currentVehicle.Producer = _view.GetProducer();
             _currentVehicle.Model = _view.GetModel();
@@ -55,10 +67,11 @@ namespace VehicleHealthBook.Presenter
             _currentVehicle.Mot_date = _view.GetMotDate();
             _currentVehicle.Type = _view.GetType();
 
-            _vehicleRepository.UpdateVehicle(_currentVehicle, oldLicensePlateNumber); // Pass old license plate number
+
+            _vehicleRepository.UpdateVehicle(_currentVehicle, oldLicensePlateNumber);
+            MessageBox.Show("Vehicle updated successfully.");// Pass old license plate number
             _form1.Presenter.LoadVehicles(); // Reload the updated list of vehicles
             _view_GoToVehicleList(this, EventArgs.Empty);
-            MessageBox.Show("Vehicle updated successfully.");
         }
 
         private void _view_GoToVehicleList(object sender, EventArgs e)

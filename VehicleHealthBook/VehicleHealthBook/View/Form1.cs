@@ -99,5 +99,20 @@ namespace VehicleHealthBook.View
             listView1.ListViewItemSorter = new ListViewItemComparer(columnIndex, order);
             listView1.Sort();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

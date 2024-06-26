@@ -21,7 +21,7 @@ namespace VehicleHealthBook.Presenter
             _view = view;
             _model = model;
             _form1 = form1;
-            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=kamil;");
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=Zaq12wsx;");
             _view.AddVehicle += AddVehicle;
             _view.goToVehicleList += _view_goToVehicleList;
         }
@@ -35,7 +35,7 @@ namespace VehicleHealthBook.Presenter
                 String.IsNullOrEmpty(_view.getMileage()) ||
                 String.IsNullOrEmpty(_view.getModel()))
             {
-                MessageBox.Show("Pola nie mogą być puste!");
+                MessageBox.Show("You have to fill the empty spaces!");
             }
             else
             {
@@ -50,7 +50,7 @@ namespace VehicleHealthBook.Presenter
                     _view.getType()
                 );
                 _vehicleRepository.AddVehicle(veh);
-                MessageBox.Show("działa");
+                MessageBox.Show("Vehicle added succesfully!");
                 _view.ClearForm();
                 _form1.Presenter.LoadVehicles(); // Load the updated list of vehicles
                 _view_goToVehicleList(this, EventArgs.Empty);

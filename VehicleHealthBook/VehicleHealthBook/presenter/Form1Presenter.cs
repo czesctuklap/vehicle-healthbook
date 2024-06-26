@@ -22,7 +22,7 @@ namespace VehicleHealthBook.Presenter
         {
             _view = view;
             _model = model;
-            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=kamil;");
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=Zaq12wsx;");
             LoadVehicles();
 
             _view.GoToAddVehicle += _view_GoToAddVehicle;

@@ -155,3 +155,4 @@ D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\System
 D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form4.resources
 D:\repos\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleH.B3BEDE55.Up2Date
+C:\Users\zuzia\Documents\GitHub\vehicle-healthbook\VehicleHealthBook\VehicleHealthBook\obj\Debug\VehicleHealthBook.View.Form4.resources
