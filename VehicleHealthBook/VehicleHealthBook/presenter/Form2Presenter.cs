@@ -21,7 +21,7 @@ namespace VehicleHealthBook.Presenter
             _view = view;
             _model = model;
             _form1 = form1;
-            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=1234;");
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=kamil;");
             _view.AddVehicle += AddVehicle;
             _view.goToVehicleList += _view_goToVehicleList;
         }

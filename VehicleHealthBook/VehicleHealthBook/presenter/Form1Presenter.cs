@@ -22,7 +22,7 @@ namespace VehicleHealthBook.Presenter
         {
             _view = view;
             _model = model;
-            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=1234;");
+            _vehicleRepository = new VehicleRepository("Server=localhost;Database=vehicle_healthbook;User Id=root;Password=kamil;");
             LoadVehicles();
 
             _view.GoToAddVehicle += _view_GoToAddVehicle;
@@ -68,7 +68,8 @@ namespace VehicleHealthBook.Presenter
                     Form3 form3 = new Form3(_model, _view, producer, model, year_produced, license_plate_number, mileage, insurance_date, mot_date, type);
                     form3.vehicleList = _model;  // Przekazanie listy pojazdów do Form3
                     form3.Show();
-                    //_view.Hide();
+                    _view.Hide();
+
                 }
             }
         }

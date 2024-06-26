@@ -35,6 +35,12 @@ namespace VehicleHealthBook.View
             _vehicleList = vList;  // Ustawienie istniejącej listy pojazdów
             presenter = new Form2Presenter(this, vList, form1);  // Przekazanie referencji do Form1 do presenter
             _form1 = form1;
+            this.FormClosing += Form2_FormClosing;
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         public VehicleType getType()

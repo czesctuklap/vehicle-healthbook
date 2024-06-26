@@ -95,6 +95,32 @@ namespace VehicleHealthBook.Model
             }
         }
 
-    }
+        public void UpdateVehicle(Vehicle vehicle, string oldLicensePlateNumber)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "UPDATE vehicles SET producer = @producer, model = @model, production_year = @production_year, " +
+                            "license_plate_num = @new_license_plate_num, mileage = @mileage, insurance_date = @insurance_date, " +
+                            "mot_date = @mot_date, type = @type WHERE license_plate_num = @old_license_plate_num";
 
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@producer", vehicle.Producer);
+                    command.Parameters.AddWithValue("@model", vehicle.Model);
+                    command.Parameters.AddWithValue("@production_year", vehicle.Year_produced);
+                    command.Parameters.AddWithValue("@new_license_plate_num", vehicle.License_number); // New license plate number
+                    command.Parameters.AddWithValue("@mileage", vehicle.Mileage);
+                    command.Parameters.AddWithValue("@insurance_date", vehicle.Insurance_date);
+                    command.Parameters.AddWithValue("@mot_date", vehicle.Mot_date);
+                    command.Parameters.AddWithValue("@type", vehicle.Type.ToString());
+                    command.Parameters.AddWithValue("@old_license_plate_num", oldLicensePlateNumber); // Old license plate number
+
+                    command.ExecuteNonQuery();
+                }
+            }
+
+        }
+
+    }
 }

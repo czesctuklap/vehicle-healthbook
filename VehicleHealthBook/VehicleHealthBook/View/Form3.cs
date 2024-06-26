@@ -39,6 +39,7 @@ namespace VehicleHealthBook.View
             _vehicleList = vList;  // Ustawienie istniejącej listy pojazdów
             presenter = new Form3Presenter(this, _vehicleList, form1);  // Przekazanie referencji do Form1 do presenter
             _form1 = form1;
+            this.FormClosing += Form3_FormClosing;
 
             // Możesz też dodać event handlers lub inicjalizację UI
             label9.Text = type;
@@ -54,6 +55,11 @@ namespace VehicleHealthBook.View
 
         public event EventHandler GoToVehicleList;
 
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void deleteVehicle(object sender, EventArgs e)
         {
             _form1.deleteVehicle(sender, e);
@@ -63,6 +69,24 @@ namespace VehicleHealthBook.View
         private void goToVehicleList(object sender, EventArgs e)
         {
             GoToVehicleList?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void editVehicleButton_Click(object sender, EventArgs e)
+        {
+            var selectedVehicle = new Vehicle(
+                label10.Text, // Producer
+                label11.Text, // Model
+                label12.Text, // YearProduced
+                label16.Text, // LicenseNumber
+                label13.Text, // Mileage
+                DateTime.Parse(label14.Text), // InsuranceDate
+                DateTime.Parse(label15.Text), // MotDate
+                (VehicleType)Enum.Parse(typeof(VehicleType), label9.Text) // Type
+            );
+
+            Form4 form4 = new Form4(_vehicleList, _form1, selectedVehicle);
+            form4.Show();
+            this.Hide();
         }
     }
 }

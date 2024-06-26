@@ -27,6 +27,5 @@ namespace VehicleHealthBook.Presenter
             _view.Hide();
             _form1.Show();
         }
-
     }
 }
