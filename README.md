@@ -16,5 +16,9 @@ In SQL console type:
 - `use vehicle_halthbook`
 - `/. ` and copy the location of the `vehicle_hb.sql` file replacing every `\` with `/`
 
-
 The project is implemented using the `Model-View-Presenter` architecture. 
+
+### Preview
+![image](https://github.com/user-attachments/assets/378e0425-e541-44eb-b4cf-33d10973b9d0)
+![image](https://github.com/user-attachments/assets/b563af16-462c-47bf-9f83-4563084fe370)
+
