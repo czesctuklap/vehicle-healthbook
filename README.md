@@ -1,4 +1,4 @@
-# vehicle-healthbook
+# Vehicle HealthBook
 
 Vehicle HealthBook is a desktop application designed for monitoring vehicle statistics and managing a fleet of vehicles. It features a simple interface built in C# and uses a SQL database for reliable data storage.
 
@@ -17,4 +17,4 @@ In SQL console type:
 - `/. ` and copy the location of the `vehicle_hb.sql` file replacing every `\` with `/`
 
 
-The project is implemented using the Model-View-Presenter (MVP) architecture. 
+The project is implemented using the `Model-View-Presenter` architecture. 
